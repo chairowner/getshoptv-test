@@ -1,0 +1,17 @@
+@import '../../styles/theme.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0 14px 29;
+
+  &.background {
+    background-color: $color-gray03;
+  }
+
+  .navbar {
+    display: flex;
+    gap: 64px;
+  }
+}

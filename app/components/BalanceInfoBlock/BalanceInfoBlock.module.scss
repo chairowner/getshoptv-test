@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+  padding: 32px;
+
+  .icon {
+    padding: 4px;
+  }
+
+  &>div:first-child {
+    margin-bottom: 4px;
+  }
+}

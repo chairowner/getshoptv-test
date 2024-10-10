@@ -1,0 +1,55 @@
+@import '../../styles/theme.scss';
+
+.button {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  transition: all 100ms ease-in;
+
+  &.primary {
+    background-color: $color-orange;
+    padding: 12px 45px;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-dark-orange;
+    }
+
+    &:active {
+      color: $color-gray01;
+      background-color: $color-gray02;
+    }
+  }
+
+  &.secondary {
+    background-color: $color-black;
+    padding: 12px 45px;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+      background-color: $color-gray01;
+      color: $color-white;
+    }
+  }
+
+  &.menu {
+    background-color: transparent;
+    padding: 10px 32px;
+    color: $color-black;
+    font-weight: 600;
+
+    &:hover {
+      color: $color-orange;
+    }
+
+    &:active {
+      color: $color-orange;
+      text-decoration: underline;
+    }
+  }
+}

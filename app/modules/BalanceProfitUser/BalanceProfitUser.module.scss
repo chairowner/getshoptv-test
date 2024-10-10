@@ -1,0 +1,77 @@
+@import '../../styles/theme.scss';
+
+.bg {
+  background-color: $color-gray04;
+}
+
+.container {
+  padding: 110px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+
+  .logoWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .line {
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      content: ' ';
+      background-color: $color-orange;
+      width: calc(50% - 60px);
+
+      &:first-child,
+      &:last-child {
+
+        &::after {
+          content: ' ';
+          background-color: $color-orange;
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          position: absolute;
+          top: -4px;
+        }
+      }
+
+      &:first-child {
+        right: 0;
+
+        &::after {
+          right: 0;
+        }
+      }
+
+      &:last-child {
+        left: 0;
+
+        &::after {
+          left: 0;
+        }
+      }
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-orange;
+      border-radius: 17.97px;
+    }
+  }
+
+  .balanceBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+  }
+}

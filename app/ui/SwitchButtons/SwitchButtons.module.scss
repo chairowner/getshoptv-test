@@ -1,0 +1,33 @@
+@import '../../styles/typography.scss';
+@import '../../styles/theme.scss';
+
+.buttons {
+  padding: 4px;
+  background-color: $color-gray04;
+  border-radius: 14px;
+  display: flex;
+  width: fit-content;
+
+  .item {
+    font-size: $desktop-font-size-h2;
+    line-height: $desktop-line-height-h2;
+    font-weight: 700;
+    color: $color-gray01;
+    padding: 10px;
+    width: 276px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &.active {
+      background-color: $color-black;
+      color: $color-white;
+    }
+
+    &:not(.active) {
+      cursor: pointer;
+    }
+
+  }
+}
