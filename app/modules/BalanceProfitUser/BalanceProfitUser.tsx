@@ -16,7 +16,6 @@ export const BalanceProfitUser = () => {
 						/>
 						<div className={s.logoWrapper}>
 							<div className={s.line} />
-
 							<div className={s.logo}>
 								<Image
 									src="/icons/balance_logo.svg"
@@ -25,7 +24,6 @@ export const BalanceProfitUser = () => {
 									height={74.81}
 								/>
 							</div>
-
 							<div className={s.line} />
 						</div>
 						<BalanceInfoBlock
