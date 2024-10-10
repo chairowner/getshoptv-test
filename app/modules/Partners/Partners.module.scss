@@ -1,10 +1,16 @@
-.container {
-  padding: 30px;
-  display: flex;
-  gap: 95px;
+.wrapper {
+  padding: 80px 0 100px 0;
 
-  .partners {
+  .container {
+    height: 122px;
     display: flex;
-    gap: 81px;
+    align-items: center;
+    gap: 95px;
+
+    .partners {
+      display: flex;
+      align-items: center;
+      gap: 81px;
+    }
   }
 }
