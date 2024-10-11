@@ -1,9 +1,14 @@
+@import '../../styles/theme.scss';
+
+$blur-height: 80px;
+
 .container {
   background-image: url('/images/blue-glass-shapes-composition-3d-rendering 1.png');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  position: relative;
 
   .content {
     margin-top: 204px;
@@ -22,5 +27,12 @@
         max-width: 626px;
       }
     }
+  }
+
+  .blur {
+    width: 100%;
+    height: $blur-height;
+    background-color: $color-gray03;
+    filter: blur(20px);
   }
 }

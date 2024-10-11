@@ -20,6 +20,7 @@ export const MonetizeCustomerBaseBlock = () => {
 					</div>
 				</div>
 			</div>
+			<div className={s.blur}></div>
 		</div>
 	);
 };

@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 export const BalanceProfitUser = () => {
 	return (
-		<div className={classNames("wrapper", s.bg)}>
+		<div className={classNames("wrapper", "white-background")}>
 			<div className="container">
 				<div className={s.wrapper}>
 					<div className={s.container}>

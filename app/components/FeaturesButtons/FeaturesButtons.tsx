@@ -21,8 +21,6 @@ export const FeaturesButtons = () => {
 	]);
 
 	const onClickHandler = (btn: string) => {
-		console.log(btn);
-
 		setItems((items) => {
 			return items.map((item) => ({ ...item, active: item.btn === btn }));
 		});
@@ -31,7 +29,7 @@ export const FeaturesButtons = () => {
 	return (
 		<div className={s.container}>
 			<SwitchButtons items={items} onClickHandler={onClickHandler} />
-			<span className="button-text">
+			<span className="body-text-1">
 				{items.find((item) => item.active)?.text}
 			</span>
 		</div>

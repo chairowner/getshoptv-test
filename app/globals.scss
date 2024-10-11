@@ -54,7 +54,10 @@ a {
   margin: 0 auto;
 }
 
-// Глобальные стили для заголовков
+.white-background {
+  background-color: $color-gray04;
+}
+
 h1 {
   font-family: 'Onest', sans-serif;
   font-weight: bold;
@@ -63,11 +66,15 @@ h1 {
   letter-spacing: $desktop-letter-spacing-h0;
 
   @media (max-width: 1024px) {
-    font-size: $tablet-font-size-h0;
+    font-size: $tablet-font-size-h1;
+    line-height: $tablet-line-height-h1;
+    letter-spacing: $tablet-letter-spacing-h1;
   }
 
   @media (max-width: 768px) {
-    font-size: $mobile-font-size-h0;
+    font-size: $mobile-font-size-h1;
+    line-height: $mobile-line-height-h1;
+    letter-spacing: $mobile-letter-spacing-h1;
   }
 }
 
@@ -79,11 +86,15 @@ h2 {
   letter-spacing: $desktop-letter-spacing-h1;
 
   @media (max-width: 1024px) {
-    font-size: $tablet-font-size-h1;
+    font-size: $tablet-font-size-h2;
+    line-height: $tablet-line-height-h2;
+    letter-spacing: $tablet-letter-spacing-h2;
   }
 
   @media (max-width: 768px) {
-    font-size: $mobile-font-size-h1;
+    font-size: $mobile-font-size-h2;
+    line-height: $mobile-line-height-h2;
+    letter-spacing: $mobile-letter-spacing-h2;
   }
 }
 
@@ -94,22 +105,32 @@ h3 {
   line-height: $desktop-line-height-h2;
 
   @media (max-width: 1024px) {
-    font-size: $tablet-font-size-h2;
+    font-size: $tablet-font-size-h3;
+    line-height: $tablet-line-height-h3;
   }
 
   @media (max-width: 768px) {
-    font-size: $mobile-font-size-h2;
+    font-size: $mobile-font-size-h3;
+    line-height: $mobile-line-height-h3;
   }
 }
 
-// Стили для кнопок и основного текста
 .button-text {
   font-family: 'Onest', sans-serif;
   font-size: $desktop-font-size-button;
   line-height: $desktop-line-height-button;
+  letter-spacing: $desktop-letter-spacing-button;
+
+  @media (max-width: 1024px) {
+    font-size: $tablet-font-size-button;
+    line-height: $tablet-line-height-button;
+    letter-spacing: $tablet-letter-spacing-button;
+  }
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: $mobile-font-size-button;
+    line-height: $mobile-line-height-button;
+    letter-spacing: $mobile-letter-spacing-button;
   }
 }
 
@@ -118,8 +139,14 @@ h3 {
   font-size: $desktop-font-size-body1;
   line-height: $desktop-line-height-body1;
 
+  @media (max-width: 1024px) {
+    font-size: $tablet-font-size-body1;
+    line-height: $tablet-line-height-body1;
+  }
+
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: $mobile-font-size-body1;
+    line-height: $mobile-line-height-body1;
   }
 }
 
@@ -128,7 +155,13 @@ h3 {
   font-size: $desktop-font-size-body2;
   line-height: $desktop-line-height-body2;
 
+  @media (max-width: 1024px) {
+    font-size: $tablet-font-size-body2;
+    line-height: $tablet-line-height-body2;
+  }
+
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: $mobile-font-size-body2;
+    line-height: $mobile-line-height-body2;
   }
 }

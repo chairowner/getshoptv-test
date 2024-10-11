@@ -14,7 +14,7 @@ export const BalanceInfoBlock: FC<BalanceInfoBlockProps> = ({
 	return (
 		<div className={s.container}>
 			<div className={s.icon}>
-				<Image src="/icons/bulit.svg" alt="balance" width={24} height={24} />
+				<Image src="/icons/bullet.svg" alt="balance" width={24} height={24} />
 			</div>
 			<h3>{title}</h3>
 			<div>

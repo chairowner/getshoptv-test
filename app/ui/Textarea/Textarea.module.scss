@@ -1,0 +1,14 @@
+@import '../../styles/theme.scss';
+
+.textarea {
+  border-radius: 12px;
+  color: $color-black;
+  border: 1px $color-gray01 solid;
+  background-color: transparent;
+  padding: 14px 18px;
+  outline: none;
+
+  &::placeholder {
+    color: $color-black;
+  }
+}

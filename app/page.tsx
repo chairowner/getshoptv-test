@@ -3,6 +3,8 @@ import { MonetizeCustomerBaseBlock } from "./modules/MonetizeCustomerBaseBlock/M
 import { Flex } from "./components/Flex/Flex";
 import { BalanceProfitUser } from "./modules/BalanceProfitUser/BalanceProfitUser";
 import { Partners } from "./modules/Partners/Partners";
+import { DetailedReports } from "./modules/DetailedReports/DetailedReports";
+import { Form } from "./modules/Form/Form";
 
 export default function Home() {
 	return (
@@ -11,6 +13,8 @@ export default function Home() {
 			<AdditionalRevenueSources />
 			<BalanceProfitUser />
 			<Partners />
+			<DetailedReports />
+			<Form />
 		</Flex>
 	);
 }
