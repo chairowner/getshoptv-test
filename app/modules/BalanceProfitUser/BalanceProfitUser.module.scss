@@ -12,8 +12,17 @@ $logo-table-size: 80px;
   align-items: center;
   gap: 80px;
 
+  @media (max-width: $mobile-size) {
+    padding: 40px 0 20px 0;
+    gap: 31px;
+  }
+
   .title {
     text-align: center;
+
+    @media (max-width: $mobile-size) {
+      text-align: start;
+    }
   }
 
   .balanceBlock {

@@ -1,5 +1,6 @@
 @import '../../styles/typography.scss';
 @import '../../styles/theme.scss';
+@import '../../styles/sizes.scss';
 
 .buttons {
   padding: 4px;
@@ -19,6 +20,10 @@
     background-color: transparent;
 
     @media (max-width: 700px) {
+      max-width: 276px;
+    }
+
+    @media (max-width: $mobile-size) {
       max-width: none;
     }
 

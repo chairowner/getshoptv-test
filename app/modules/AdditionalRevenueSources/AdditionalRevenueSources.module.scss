@@ -11,6 +11,11 @@
     flex-wrap: wrap;
   }
 
+  @media (max-width: $mobile-size) {
+    margin-top: 10px;
+    margin-bottom: 38px;
+  }
+
   .text {
     width: 100%;
     max-width: 460px;
