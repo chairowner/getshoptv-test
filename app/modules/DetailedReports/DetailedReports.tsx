@@ -21,6 +21,7 @@ export const DetailedReports = () => {
 								{list.map((item, index) => (
 									<div key={index} className={s.item}>
 										<Image
+											className={s.image}
 											src="/icons/bullet.svg"
 											alt="marker"
 											width={24}
@@ -31,12 +32,15 @@ export const DetailedReports = () => {
 								))}
 							</div>
 						</div>
-						<div>
-							<Button variant="secondary">Заказать звонок</Button>
+						<div className={s.buttons}>
+							<Button className={s.buy} variant="secondary">
+								Заказать звонок
+							</Button>
 						</div>
 					</div>
 					<div className={s.right}>
 						<Image
+							className={s.image}
 							width={721}
 							height={482}
 							src="/images/laptop.png"

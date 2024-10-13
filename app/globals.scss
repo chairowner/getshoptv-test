@@ -1,3 +1,4 @@
+@import './styles/sizes.scss';
 @import './styles/typography.scss';
 @import './styles/theme.scss';
 @import './styles/fonts.scss';
@@ -44,90 +45,104 @@ a {
 }
 
 .wrapper {
-  padding-left: 110px;
-  padding-right: 110px;
+  padding: 0 110px;
+
+  @media (max-width: $table-size) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $mobile-size) {
+    padding: 0 16px;
+  }
 }
 
 .container {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
+
+  @media (max-width: $table-size) {
+    max-width: 688px;
+  }
+
+  @media (max-width: $mobile-size) {
+    max-width: none;
+  }
 }
 
 .white-background {
   background-color: $color-gray04;
 }
 
-h1 {
-  font-family: 'Onest', sans-serif;
+h1,
+.h1 {
   font-weight: bold;
   font-size: $desktop-font-size-h0;
   line-height: $desktop-line-height-h0;
   letter-spacing: $desktop-letter-spacing-h0;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $table-size) {
     font-size: $tablet-font-size-h1;
     line-height: $tablet-line-height-h1;
     letter-spacing: $tablet-letter-spacing-h1;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile-size) {
     font-size: $mobile-font-size-h1;
     line-height: $mobile-line-height-h1;
     letter-spacing: $mobile-letter-spacing-h1;
   }
 }
 
-h2 {
-  font-family: 'Onest', sans-serif;
+h2,
+.h2 {
   font-weight: bold;
   font-size: $desktop-font-size-h1;
   line-height: $desktop-line-height-h1;
   letter-spacing: $desktop-letter-spacing-h1;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $table-size) {
     font-size: $tablet-font-size-h2;
     line-height: $tablet-line-height-h2;
     letter-spacing: $tablet-letter-spacing-h2;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile-size) {
     font-size: $mobile-font-size-h2;
     line-height: $mobile-line-height-h2;
     letter-spacing: $mobile-letter-spacing-h2;
   }
 }
 
-h3 {
-  font-family: 'Onest', sans-serif;
+h3,
+.h3 {
   font-weight: bold;
   font-size: $desktop-font-size-h2;
   line-height: $desktop-line-height-h2;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $table-size) {
     font-size: $tablet-font-size-h3;
     line-height: $tablet-line-height-h3;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile-size) {
     font-size: $mobile-font-size-h3;
     line-height: $mobile-line-height-h3;
   }
 }
 
 .button-text {
-  font-family: 'Onest', sans-serif;
   font-size: $desktop-font-size-button;
   line-height: $desktop-line-height-button;
   letter-spacing: $desktop-letter-spacing-button;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $table-size) {
     font-size: $tablet-font-size-button;
     line-height: $tablet-line-height-button;
     letter-spacing: $tablet-letter-spacing-button;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile-size) {
     font-size: $mobile-font-size-button;
     line-height: $mobile-line-height-button;
     letter-spacing: $mobile-letter-spacing-button;
@@ -135,32 +150,30 @@ h3 {
 }
 
 .body-text-1 {
-  font-family: 'Onest', sans-serif;
   font-size: $desktop-font-size-body1;
   line-height: $desktop-line-height-body1;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $table-size) {
     font-size: $tablet-font-size-body1;
     line-height: $tablet-line-height-body1;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile-size) {
     font-size: $mobile-font-size-body1;
     line-height: $mobile-line-height-body1;
   }
 }
 
 .body-text-2 {
-  font-family: 'Onest', sans-serif;
   font-size: $desktop-font-size-body2;
   line-height: $desktop-line-height-body2;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $table-size) {
     font-size: $tablet-font-size-body2;
     line-height: $tablet-line-height-body2;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile-size) {
     font-size: $mobile-font-size-body2;
     line-height: $mobile-line-height-body2;
   }

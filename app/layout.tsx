@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import { Header } from "./modules/Header/Header";
-import s from "./layout.module.scss";
 
 export const metadata: Metadata = {
 	title: "GetShopTV - тестовое задание",

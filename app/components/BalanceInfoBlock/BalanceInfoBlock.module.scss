@@ -1,3 +1,5 @@
+@import '../../styles/sizes.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,8 +7,31 @@
   width: 300px;
   padding: 32px;
 
+  @media (max-width: $table-size) {
+    width: 216px;
+  }
+
+  @media (max-width: $pre-mobile-size) {
+    width: 100%;
+    padding: 24px;
+  }
+
   .icon {
     padding: 4px;
+
+    @media (max-width: $table-size) {
+      padding: 3px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+
+      @media (max-width: $table-size) {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 
   &>div:first-child {

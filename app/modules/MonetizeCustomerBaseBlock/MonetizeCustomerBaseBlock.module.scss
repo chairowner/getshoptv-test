@@ -1,4 +1,5 @@
 @import '../../styles/theme.scss';
+@import '../../styles/sizes.scss';
 
 $blur-height: 80px;
 
@@ -17,6 +18,14 @@ $blur-height: 80px;
     flex-direction: column;
     gap: 80px;
 
+    @media (max-width: $table-size) {
+      gap: 62px;
+    }
+
+    @media (max-width: $mobile-size) {
+      gap: 112px;
+    }
+
     .text {
       display: flex;
       flex-direction: column;
@@ -25,6 +34,15 @@ $blur-height: 80px;
       .addition {
         width: 100%;
         max-width: 626px;
+        font-weight: normal;
+      }
+    }
+
+    .button {
+      width: fit-content;
+
+      @media (max-width: $table-size) {
+        width: 100%;
       }
     }
   }

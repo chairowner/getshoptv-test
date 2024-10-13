@@ -3,10 +3,16 @@ import {
 	SwitchButtons,
 	SwitchItem,
 } from "@/app/ui/SwitchButtons/SwitchButtons";
-import { useState } from "react";
+import { FC, HTMLAttributes, useState } from "react";
 import s from "./FeaturesButtons.module.scss";
+import classNames from "classnames";
 
-export const FeaturesButtons = () => {
+interface FeaturesButtonsProps extends HTMLAttributes<HTMLDivElement> {}
+
+export const FeaturesButtons: FC<FeaturesButtonsProps> = ({
+	className,
+	...props
+}) => {
 	const [items, setItems] = useState<SwitchItem[]>([
 		{
 			btn: "Операторам",
@@ -27,7 +33,7 @@ export const FeaturesButtons = () => {
 	};
 
 	return (
-		<div className={s.container}>
+		<div className={classNames(s.container, className)} {...props}>
 			<SwitchButtons items={items} onClickHandler={onClickHandler} />
 			<span className="body-text-1">
 				{items.find((item) => item.active)?.text}

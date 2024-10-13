@@ -1,6 +1,6 @@
 import { FC } from "react";
-import s from "./BalanceInfoBlock.module.scss";
 import Image from "next/image";
+import s from "./BalanceInfoBlock.module.scss";
 
 interface BalanceInfoBlockProps {
 	title: string;
@@ -17,9 +17,7 @@ export const BalanceInfoBlock: FC<BalanceInfoBlockProps> = ({
 				<Image src="/icons/bullet.svg" alt="balance" width={24} height={24} />
 			</div>
 			<h3>{title}</h3>
-			<div>
-				<span>{text}</span>
-			</div>
+			<span className="body-text-2">{text}</span>
 		</div>
 	);
 };

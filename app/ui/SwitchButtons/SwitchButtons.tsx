@@ -27,7 +27,7 @@ export const SwitchButtons: FC<SwitchButtonsProps> = ({
 							onClickHandler(item.btn);
 						}
 					}}
-					className={classNames(s.item, item.active && s.active)}
+					className={classNames("h3", s.item, item.active && s.active)}
 				>
 					{item.btn}
 				</button>

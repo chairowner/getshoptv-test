@@ -1,3 +1,5 @@
+@import "../../styles/sizes.scss";
+
 .wrapper {
   overflow: hidden;
 
@@ -6,16 +8,50 @@
     display: flex;
     gap: 172px;
 
+    @media (max-width: $table-size) {
+      gap: 75px;
+      align-items: center;
+    }
+
+    @media (max-width: $mobile-size) {
+      flex-direction: column;
+    }
+
     .left {
       display: flex;
       flex-direction: column;
       gap: 80px;
+
+      @media (max-width: $table-size) {
+        gap: 32px;
+        width: 334px;
+      }
+
+      @media (max-width: $mobile-size) {
+        width: 100%;
+      }
+
+      .buttons {
+        @media (max-width: $mobile-size) {
+          width: 100%;
+        }
+
+        .buy {
+          @media (max-width: $mobile-size) {
+            width: 100%;
+          }
+        }
+      }
 
       .listContainer {
         width: 497px;
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        @media (max-width: $table-size) {
+          width: auto;
+        }
 
         .list {
           display: flex;
@@ -29,7 +65,35 @@
             display: flex;
             gap: 16px;
             align-items: flex-start;
+
+            .image {
+              @media (max-width: $table-size) {
+                width: 18px;
+                height: 18px;
+              }
+            }
           }
+        }
+      }
+    }
+
+    .right {
+      @media (max-width: $mobile-size) {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .image {
+        @media (max-width: $table-size) {
+          width: 399px;
+          height: 266px;
+        }
+
+        @media (max-width: $mobile-size) {
+          width: 502px;
+          height: 336px;
+          position: relative;
+          left: 90px;
         }
       }
     }

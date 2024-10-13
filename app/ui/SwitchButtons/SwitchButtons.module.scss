@@ -6,23 +6,26 @@
   background-color: $color-gray04;
   border-radius: 14px;
   display: flex;
-  width: fit-content;
+  width: 100%;
 
   .item {
-    font-size: $desktop-font-size-h2;
-    line-height: $desktop-line-height-h2;
-    font-weight: 700;
     color: $color-gray01;
     padding: 10px;
-    width: 276px;
+    max-width: 276px;
+    width: 100%;
     border-radius: 10px;
     border: none;
     outline: none;
     background-color: transparent;
 
+    @media (max-width: 700px) {
+      max-width: none;
+    }
+
     &.active {
       background-color: $color-black;
       color: $color-white;
+      cursor: default;
     }
 
     &:not(.active) {

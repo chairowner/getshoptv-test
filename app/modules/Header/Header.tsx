@@ -8,29 +8,24 @@ import s from "./Header.module.scss";
 export const Header = () => {
 	const [onTop, setOnTop] = useState<boolean>(true);
 	const [hidden, setHidden] = useState<boolean>(false);
-	const [lastScrollTop, setLastScrollTop] = useState<number>(0);
+	const [lastScrollTop, setLastScrollTop] = useState<number>(window.scrollY);
 
 	const scrollHandler = () => {
 		const scrollTop = window.scrollY;
 
-		// Появление Header при прокрутке наверх или при scrollTop < 10
 		if (scrollTop < 10) {
 			setOnTop(true);
 			setHidden(false);
 		} else {
 			setOnTop(false);
 
-			// Скрытие Header при прокрутке вниз и показ при прокрутке вверх
 			if (scrollTop > lastScrollTop + 10) {
-				// Скролл вниз (порог в 10px)
 				setHidden(true);
 			} else if (scrollTop < lastScrollTop - 10) {
-				// Скролл вверх (порог в 10px)
 				setHidden(false);
 			}
 		}
 
-		// Обновляем последнюю позицию скролла
 		setLastScrollTop(scrollTop);
 	};
 

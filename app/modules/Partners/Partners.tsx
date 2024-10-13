@@ -38,12 +38,10 @@ export const Partners = () => {
 						<h3>Наши партнёры по монетизации</h3>
 						<div className={s.partners}>
 							{partners.map((item, index) => (
-								<Image
+								<img
 									key={index}
 									src={`/icons/partners/${item.src}`}
 									alt={item.alt}
-									width={item.width}
-									height={item.height}
 								/>
 							))}
 						</div>

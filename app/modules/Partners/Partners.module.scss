@@ -1,16 +1,94 @@
+@import '../../styles/sizes.scss';
+
 .wrapper {
   padding: 80px 0 100px 0;
 
   .container {
     height: 122px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 95px;
+    gap: 90px;
+    padding-right: 70px;
+
+    @media (max-width: $desktop-medium-size) {
+      gap: 30px;
+      padding-right: 40px;
+    }
+
+    @media (max-width: $table-size) {
+      gap: 21px;
+      padding-right: 0;
+    }
+
+    @media (max-width: calc($table-size - 148px)) {
+      flex-wrap: wrap;
+    }
 
     .partners {
+      width: -webkit-fill-available;
       display: flex;
-      align-items: center;
-      gap: 81px;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+
+      @media (max-width: calc($table-size - 148px)) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+      }
+
+      img {
+        &:nth-child(1) {
+          height: 55px;
+
+          @media (max-width: $desktop-medium-size) {
+            height: 40px;
+          }
+
+          @media (max-width: $table-size) {
+            height: 37.7px;
+          }
+
+          @media (max-width: $mobile-size) {
+            height: 42px;
+          }
+        }
+
+        &:nth-child(2) {
+          height: 70.78px;
+
+          @media (max-width: $desktop-medium-size) {
+            height: 50px;
+          }
+
+          @media (max-width: $table-size) {
+            height: 48.51px;
+          }
+
+          @media (max-width: $mobile-size) {
+            height: 58px;
+            order: 3;
+          }
+        }
+
+        &:nth-child(3) {
+          height: 60.52px;
+
+          @media (max-width: $desktop-medium-size) {
+            height: 50px;
+          }
+
+          @media (max-width: $table-size) {
+            height: 41.48px;
+          }
+
+          @media (max-width: $mobile-size) {
+            height: 47px;
+            order: 2;
+          }
+        }
+      }
     }
   }
 }

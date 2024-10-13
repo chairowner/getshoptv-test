@@ -6,7 +6,7 @@ export const AdditionalRevenueSources = () => {
 		<div className="wrapper">
 			<div className="container">
 				<div className={s.container}>
-					<div>
+					<div className={s.text}>
 						<h2>Дополнительные источники выручки для разных компаний</h2>
 					</div>
 					<FeaturesButtons />
