@@ -8,6 +8,12 @@
   padding-bottom: 200px;
   flex: 1;
 
+  @media (max-width: $mobile-size) {
+    gap: 35px;
+    padding-top: 80px;
+    padding-bottom: 26px
+  }
+
   .form {
     display: flex;
     gap: 40px;
@@ -16,6 +22,10 @@
     @media (max-width: $pre-table-size) {
       flex-direction: column;
       height: auto;
+    }
+
+    @media (max-width: $mobile-size) {
+      gap: 32px;
     }
 
     .textarea {
