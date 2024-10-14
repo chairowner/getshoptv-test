@@ -1,9 +1,11 @@
 import { Input } from "@/app/ui/Input/Input";
 import { Textarea } from "@/app/ui/Textarea/Textarea";
 import { Button } from "@/app/ui/Button/Button";
+import { FC } from "react";
 import s from "./Form.module.scss";
+import { SectionProps } from "@/app/types";
 
-export const Form = () => {
+export const Form: FC<SectionProps> = ({ section }) => {
 	return (
 		<div className="wrapper">
 			<div className="container">

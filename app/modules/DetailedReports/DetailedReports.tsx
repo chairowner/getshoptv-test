@@ -1,7 +1,9 @@
 import Image from "next/image";
-import s from "./DetailedReports.module.scss";
 import classNames from "classnames";
 import { Button } from "@/app/ui/Button/Button";
+import { FC } from "react";
+import { SectionProps } from "@/app/types";
+import s from "./DetailedReports.module.scss";
 
 const list: string[] = [
 	"Выручка, CTR, показы и другие показатели в реальном времени.",
@@ -9,7 +11,7 @@ const list: string[] = [
 	"Ежемесячные автоматические отчёты для каждого правообладателя.",
 ];
 
-export const DetailedReports = () => {
+export const DetailedReports: FC<SectionProps> = ({ section }) => {
 	return (
 		<div className={classNames("wrapper", "white-background", s.wrapper)}>
 			<div className="container">

@@ -9,12 +9,12 @@ import { Form } from "./modules/Form/Form";
 export default function Home() {
 	return (
 		<Flex vertical>
-			<MonetizeCustomerBaseBlock />
-			<AdditionalRevenueSources />
-			<BalanceProfitUser />
-			<Partners />
-			<DetailedReports />
-			<Form />
+			<MonetizeCustomerBaseBlock section="advantages" />
+			<AdditionalRevenueSources section="advantages" />
+			<BalanceProfitUser section="advantages" />
+			<Partners section="advantages" />
+			<DetailedReports section="how-to-work" />
+			<Form section="how-to-work" />
 		</Flex>
 	);
 }

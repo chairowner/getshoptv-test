@@ -1,9 +1,10 @@
-import Image from "next/image";
 import classNames from "classnames";
 import { BalanceInfoBlock } from "@/app/components/BalanceInfoBlock/BalanceInfoBlock";
+import { FC } from "react";
+import { SectionProps } from "@/app/types";
 import s from "./BalanceProfitUser.module.scss";
 
-export const BalanceProfitUser = () => {
+export const BalanceProfitUser: FC<SectionProps> = ({ section }) => {
 	return (
 		<div className={classNames("wrapper", "white-background")}>
 			<div className="container">
@@ -19,7 +20,7 @@ export const BalanceProfitUser = () => {
 						<div className={s.logoWrapper}>
 							<div className={s.line} />
 							<div className={s.logo}>
-								<Image
+								<img
 									src="/icons/balance_logo.svg"
 									alt="balance"
 									width={80}

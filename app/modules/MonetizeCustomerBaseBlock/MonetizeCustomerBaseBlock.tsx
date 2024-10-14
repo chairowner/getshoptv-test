@@ -1,7 +1,9 @@
 import { Button } from "@/app/ui/Button/Button";
+import { SectionProps } from "@/app/types";
+import { FC } from "react";
 import s from "./MonetizeCustomerBaseBlock.module.scss";
 
-export const MonetizeCustomerBaseBlock = () => {
+export const MonetizeCustomerBaseBlock: FC<SectionProps> = ({ section }) => {
 	return (
 		<div className={s.container}>
 			<div className="wrapper">

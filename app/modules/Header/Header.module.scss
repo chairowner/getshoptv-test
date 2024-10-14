@@ -26,9 +26,8 @@
     align-items: center;
     padding: 14px 0 14px 0;
 
-    .navbar {
-      display: flex;
-      gap: 64px;
+    .burger {
+      z-index: 1002;
     }
   }
 }

@@ -1,5 +1,6 @@
-import Image from "next/image";
 import s from "./Partners.module.scss";
+import { FC } from "react";
+import { SectionProps } from "@/app/types";
 
 interface IPartner {
 	src: string;
@@ -29,7 +30,7 @@ const partners: IPartner[] = [
 	},
 ];
 
-export const Partners = () => {
+export const Partners: FC<SectionProps> = ({ section }) => {
 	return (
 		<div className="wrapper">
 			<div className="container">

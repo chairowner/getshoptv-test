@@ -1,7 +1,9 @@
 import { FeaturesButtons } from "@/app/components/FeaturesButtons/FeaturesButtons";
+import { FC } from "react";
+import { SectionProps } from "@/app/types";
 import s from "./AdditionalRevenueSources.module.scss";
 
-export const AdditionalRevenueSources = () => {
+export const AdditionalRevenueSources: FC<SectionProps> = ({ section }) => {
 	return (
 		<div className="wrapper">
 			<div className="container">
