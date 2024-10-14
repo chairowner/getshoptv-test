@@ -6,7 +6,10 @@ import s from "./BalanceProfitUser.module.scss";
 
 export const BalanceProfitUser: FC<SectionProps> = ({ section }) => {
 	return (
-		<div className={classNames("wrapper", "white-background")}>
+		<div
+			className={classNames("wrapper", "white-background")}
+			data-section={section}
+		>
 			<div className="container">
 				<div className={s.container}>
 					<h2 className={s.title}>

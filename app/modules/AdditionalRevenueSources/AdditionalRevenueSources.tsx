@@ -5,7 +5,7 @@ import s from "./AdditionalRevenueSources.module.scss";
 
 export const AdditionalRevenueSources: FC<SectionProps> = ({ section }) => {
 	return (
-		<div className="wrapper">
+		<div className="wrapper" data-section={section}>
 			<div className="container">
 				<div className={s.container}>
 					<div className={s.text}>

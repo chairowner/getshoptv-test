@@ -13,7 +13,10 @@ const list: string[] = [
 
 export const DetailedReports: FC<SectionProps> = ({ section }) => {
 	return (
-		<div className={classNames("wrapper", "white-background", s.wrapper)}>
+		<div
+			className={classNames("wrapper", "white-background", s.wrapper)}
+			data-section={section}
+		>
 			<div className="container">
 				<div className={s.container}>
 					<div className={s.left}>

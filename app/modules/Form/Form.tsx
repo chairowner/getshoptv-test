@@ -7,7 +7,7 @@ import { SectionProps } from "@/app/types";
 
 export const Form: FC<SectionProps> = ({ section }) => {
 	return (
-		<div className="wrapper">
+		<div className="wrapper" data-section={section}>
 			<div className="container">
 				<div className={s.container}>
 					<h2>Заполните форму</h2>

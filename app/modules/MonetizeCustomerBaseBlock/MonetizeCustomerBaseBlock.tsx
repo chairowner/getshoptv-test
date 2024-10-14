@@ -5,7 +5,7 @@ import s from "./MonetizeCustomerBaseBlock.module.scss";
 
 export const MonetizeCustomerBaseBlock: FC<SectionProps> = ({ section }) => {
 	return (
-		<div className={s.container}>
+		<div className={s.container} data-section={section}>
 			<div className="wrapper">
 				<div className="container">
 					<div className={s.content}>

@@ -6,6 +6,7 @@ import { NavbarDesktop } from "@/app/components/NavbarDesktop/NavbarDesktop";
 import { IMenuButton } from "@/app/ui/MenuButton/MenuButton";
 import s from "./Header.module.scss";
 import { NavbarMobile } from "@/app/components/NavbarMobile/NavbarMobile";
+import { HeaderType } from "@/app/types";
 
 const navItems: IMenuButton[] = [
 	{
@@ -25,6 +26,8 @@ export const Header = () => {
 	const [onTop, setOnTop] = useState<boolean>(true);
 	const [isHidden, setIsHidden] = useState<boolean>(false);
 	const [lastScrollTop, setLastScrollTop] = useState<number>(0);
+
+	const [currentSection, setCurrentSection] = useState<HeaderType | null>(null);
 
 	const checkIsMobile = () => {
 		setIsMobile(window.innerWidth <= 870);
@@ -53,6 +56,18 @@ export const Header = () => {
 			}
 		}
 		setLastScrollTop(scrollTop);
+
+		const targetPosition: number = scrollTop + 100;
+		const elements = document.querySelectorAll("[data-section]"); // Замените на ваш селектор
+		elements.forEach((el) => {
+			const rect = el.getBoundingClientRect();
+			const elementTop = rect.top + window.scrollY;
+			const elementBottom = rect.bottom + window.scrollY;
+			if (elementTop <= targetPosition && elementBottom >= targetPosition) {
+				const section = el.getAttribute("data-section");
+				setCurrentSection(section as HeaderType);
+			}
+		});
 	};
 
 	useEffect(() => {
@@ -108,14 +123,18 @@ export const Header = () => {
 								onClick={onClickBurger}
 							/>
 						) : (
-							<NavbarDesktop items={navItems} />
+							<NavbarDesktop items={navItems} currentSection={currentSection} />
 						)}
 					</header>
 				</div>
 			</div>
 
 			{burgerActive && (
-				<NavbarMobile items={navItems} onClose={onCloseBurger} />
+				<NavbarMobile
+					items={navItems}
+					onClose={onCloseBurger}
+					currentSection={currentSection}
+				/>
 			)}
 		</>
 	);

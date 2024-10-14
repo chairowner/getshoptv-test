@@ -17,7 +17,8 @@
     color: $color-orange;
   }
 
-  &:active {
+  &:active,
+  &.active {
     color: $color-orange;
     text-decoration: underline;
   }

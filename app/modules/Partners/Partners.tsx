@@ -32,7 +32,7 @@ const partners: IPartner[] = [
 
 export const Partners: FC<SectionProps> = ({ section }) => {
 	return (
-		<div className="wrapper">
+		<div className="wrapper" data-section={section}>
 			<div className="container">
 				<div className={s.wrapper}>
 					<div className={s.container}>

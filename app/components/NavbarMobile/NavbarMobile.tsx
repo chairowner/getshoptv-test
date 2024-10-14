@@ -2,13 +2,19 @@ import { FC } from "react";
 import { IMenuButton, MenuButton } from "@/app/ui/MenuButton/MenuButton";
 import { Burger } from "@/app/ui/Burger/Burger";
 import s from "./NavbarMobile.module.scss";
+import { HeaderType } from "@/app/types";
 
 export interface NavbarMobileProps {
 	items: IMenuButton[];
 	onClose: () => void;
+	currentSection?: HeaderType | null;
 }
 
-export const NavbarMobile: FC<NavbarMobileProps> = ({ items, onClose }) => {
+export const NavbarMobile: FC<NavbarMobileProps> = ({
+	items,
+	onClose,
+	currentSection,
+}) => {
 	return (
 		<div className={s.navbar}>
 			<div className={s.header}>
@@ -25,7 +31,12 @@ export const NavbarMobile: FC<NavbarMobileProps> = ({ items, onClose }) => {
 			</div>
 			<nav>
 				{items.map(({ children, href }, index) => (
-					<MenuButton key={index} children={children} href={href} />
+					<MenuButton
+						key={index}
+						children={children}
+						currentSection={currentSection}
+						href={href}
+					/>
 				))}
 			</nav>
 		</div>
